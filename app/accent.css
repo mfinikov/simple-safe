@@ -1,0 +1,31 @@
+/* Simple Safe retunes Lime's one accent from acid lime to orange #FF824F, and makes it flat:
+   the primary button is one solid fill, with no gradient, sheen, inner edge or outer cast.
+   Text on the accent stays Lime's near-black (6.9:1 on the pressed fill). */
+.lime,
+.lime[data-theme="dark"] {
+  --accent: #ff824f;
+  --accent-hover: #ff9366;
+  --accent-active: #f0733f;
+  --glow-accent-from: var(--accent);
+  --glow-accent-to: var(--accent);
+  --glow-accent-from-lit: var(--accent-hover);
+  --glow-accent-to-lit: var(--accent-hover);
+  --glow-accent-from-press: var(--accent-active);
+  --glow-accent-to-press: var(--accent-active);
+  --glow-accent-light: 0;
+  --glow-accent-edge: transparent;
+  --glow-accent-bloom: transparent;
+  --glow-accent-edge-lit: transparent;
+  --glow-accent-bloom-lit: transparent;
+  --glow-accent-cast: 255 130 79;
+}
+
+.lime {
+  --accent-wash: #ffe8dd;
+  --accent-line: #b8460f; /* 5.4:1 on white, for the focus ring and spinner */
+}
+
+.lime[data-theme="dark"] {
+  --accent-wash: #3a1d10;
+  --accent-line: #ff824f;
+}
